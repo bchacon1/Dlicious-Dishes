@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D-Licious Dishes Events</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    .hero.is-primary {
+      background-color: #8e0b9f;
+      color: #fff;
+    }
+
+    .hero .title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero img {
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            max-width: 400%;
+            max-height: 400%;
+    }
+    .hero .subtitle {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    .section {
+      padding: 3rem 0;
+    }
+    .navbar {
+      border-bottom: 2px solid #ddd;
+    }
+    
+    .event-container {
+      margin-bottom: 40px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .event-title {
+      font-weight: bold;
+      font-size: 4rem; 
+    }
+
+    .event-img {
+      width: 50%; 
+      height: auto;
+    }
+
+    #events-title {
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    #events {
+      display: flex;
+      justify-content: center; 
+    }
+
+    #catering-section {
+      margin-top: 60px;
+    }
+
+    #banner {
+      background-color: #971097;
+      color: rgb(255, 255, 255);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .event-description {
+      margin-top: 20px; 
+      padding: 20px; 
+      border: 2px solid #48c774; 
+      border-radius: 10px; 
+      background-color: #f5f5f5; 
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <strong>D-Licious Dishes</strong>
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+    
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="index.html">Home</a>
+            <a class="navbar-item" href="menu page - dlicious.html">Menu</a>
+            <a class="navbar-item" href="catering.html">Catering/Events</a>
+          </div>
+        </div>
+      </nav>
+  <section class="hero is-primary is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          <img src="D-Licious Dishes.png">
+        D-Licious Dishes Events 
+        </h1>
+        <h2 class="subtitle">
+          Fun events for the whole community
+        </h2>
+      </div>
+    </div>
+  </section>
+      <div id="events">
+        <div class="event-container">
+          <div class="event">
+            <img class="event-img" src="IMG_4072.JPG" alt="Picture of packaged food for Amazon Employees" style="width: 50%;"> <!-- Placeholder for picture -->
+            <p class="event-description" style="font-size: 1.5rem;">I want to give a huge thanks to Amazon Carteret fulfillment center for choosing D-Licious Dishes to cater their Black History Luncheon! Yesterday we provided employees with over 1000 meals split up into three shifts. I appreciate everyone who helped to make this possible and thank God for it all!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="catering-section" class="section">
+    <div class="container">
+      <h2 class="title">For catering events, contact us:</h2>
+      <form id="cateringForm">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" id="name" placeholder="Enter your name" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Phone Number</label>
+          <div class="control">
+            <input class="input" type="tel" id="phone" placeholder="Enter your phone number" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email Address</label>
+          <div class="control">
+            <input class="input" type="email" id="email" placeholder="Enter your email address" required>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary" type="submit">Submit Request</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script> 
+    document.getElementById("cateringForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+      var ownerEmail = "d.liciousdishesllc@gmail.com";
+      var subject = "Catering Event Request";
+      var body = "Name: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\n\nPlease contact the customer to discuss the catering event.";
+      window.location.href = "mailto:" + ownerEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  </script>
+
+</body>
+</html>
